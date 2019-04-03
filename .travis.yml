@@ -10,7 +10,7 @@ script:
 
 after_success:
   - docker build -t tristanzhou/multi-client ./client
-  - docker build -t tristanzhou/multi-ngnix ./ngnix
+  - docker build -t tristanzhou/multi-nginx ./nginx
   - docker build -t tristanzhou/multi-server ./server
   - docker build -t tristanzhou/multi-worker ./worker
   # Log in to the docker CLI
@@ -20,4 +20,3 @@ after_success:
   - docker push tristanzhou/multi-nginx
   - docker push tristanzhou/multi-server
   - docker push tristanzhou/multi-worker
-  
